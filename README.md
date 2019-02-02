@@ -35,7 +35,9 @@
 <h2>Arquitetura:</h2>
 <h4>A arquitetura deste projeto &eacute; baseada em microsservi&ccedil;os, utilizando a ferramenta docker<br />para a aplica&ccedil;&atilde;o do conceito. A arquitetura est&aacute; dividida da seguinte formar:</h4>
 <h4>No conteiner_1:--&gt; Est&aacute; executando a Tecnologia Angular para o front-end da aplica&ccedil;&atilde;o.<br />No conteiner_2:--&gt;Est&aacute; executando a Tecnologia Spring book para o back-end da aplica&ccedil;&atilde;o.<br />No conteiner_3:--&gt;Est&aacute; executando a ferramenta Mysql para a persist&ecirc;ncia de dados da aplica&ccedil;&atilde;o.
-<br />Segue imagem1 para demostra&ccedil;&atilde;o.<br />&lt;IMAGEM&gt;</h4>
+<br />Segue imagem1 para demostra&ccedil;&atilde;o.</h4>
+<img src="image/arquitetura.png">
+  Imagem_1
 <h2>Depend&ecirc;ncias maven:</h2>
 <h4><br />&lt;//&gt;</h4>
 <h2><br />Vers&atilde;o:</h2>
