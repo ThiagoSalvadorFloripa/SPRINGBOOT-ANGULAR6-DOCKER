@@ -1,0 +1,17 @@
+version: '3.0'
+services:
+    game-reco-mysql:
+        image: mysql:latest
+        environment:
+            - MYSQL_ROOT_PASSWORD=samaia
+            - MYSQL_DATABASE=samaia
+            - MYSQL_USER=samaia
+            - MYSQL_PASSWORD=samaia
+        ports:
+            - 3306:3306
+    contato:
+        build: ./myorg/contato
+        links:
+            - game-reco-mysql:mysql
+        ports:
+            - 8080:8080
