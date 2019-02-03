@@ -1,0 +1,26 @@
+
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .example-container > * {
+    width: 60%;
+    margin-top: 5%;
+}
+
+.margin-div{
+    margin-left: 28%;
+}
+
+.margin-butoon{
+    margin-left: 35%;
+
+}
+
+.align-center {
+    text-align: center;
+  }
+
+

@@ -1,0 +1,816 @@
+/* Correções de CSS Bootstrap 4 + Material */
+mat-nav-list a {
+    @extend .undraggable;
+  }
+  
+  .mat-radio-button {
+    margin: 0px 4px;
+  }
+  
+  mat-toolbar {
+    position: fixed;
+    top: 0;
+  }
+  
+  .mat-stroked-button,
+  mat-stroked-button {
+    margin-bottom: 3px;
+  }
+  
+  mat-sidenav-container,
+  .mat-sidenav-container,
+  .sidenav-container[_ngcontent-c1] {
+    @extend .full-width;
+    position: fixed;
+    height: calc(100% - 65px) !important;
+  
+    @media (max-width: 599px) {
+      height: calc(100% - 57px) !important;
+    }
+  }
+  
+  mat-sidenav {
+    border-right: rgba(0, 0, 0, 0.12) 1px solid;
+    margin-top: 64px;
+  
+    &.mat-drawer.mat-drawer-side {
+      z-index: auto;
+    }
+  
+    @media (max-width: 599px) {
+      border-right: inherit;
+      margin-top: 56px;
+  
+      &.mat-drawer.mat-drawer-side {
+        z-index: auto;
+      }
+    }
+  }
+  
+  mat-table,
+  .mat-table {
+    @extend .full-width;
+  }
+  
+  .toast-text {
+    @extend .unselectable;
+  }
+  
+  .form-group {
+    @extend .col-md-10;
+  
+    @media (max-width: 599px) {
+      width: 100%;
+    }
+  }
+  
+  .btn mat-raised-button {
+    margin-right: 8px;
+  }
+  
+  // Efeito de click para cedulas
+  .mat-row {
+    cursor: pointer;
+  }
+  
+  .mat-row:hover {
+    @include bright;
+    background: #f5f5f5;
+  }
+  
+  .mat-row:hover td:first-of-type {
+    padding-left: 23px;
+  }
+  
+  .mat-row:hover td:last-of-type {
+    padding-right: 23px;
+  }
+  
+  .mat-header-cell {
+    @extend .unselectable;
+  }
+  
+  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: var(--green);
+  }
+  
+  .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+  
+  .mat-slide-toggle-thumb {
+    background-color: var(--red);
+  }
+  
+  .mat-slide-toggle-bar {
+    background-color: rgba(0, 0, 0, 0.38);
+  }
+  
+  .mat-slide-toggle-label:hover .mat-slide-toggle-content,
+  .mat-slide-toggle-content:hover {
+    @include bright;
+  }
+  
+  .mat-form-field .mat-form-field-flex :hover {
+    @extend .gradient-white-lightgray;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 5px;
+  }
+  
+  mat-form-field,
+  .mat-form-field {
+    @extend .full-width;
+  }
+  
+  mat-form-field .mat-form-field-label,
+  .mat-form-field .mat-form-field-label {
+    margin-top: 2px;
+    margin-left: 2px;
+  }
+  
+  matPrefix {
+    margin: 0px 4px;
+  }
+  
+  img {
+    @extend .undraggable;
+  }
+  
+  .mat-card-actions,
+  .mat-card-footer {
+    padding-top: 0px;
+    padding-bottom: 24px !important;
+  }
+  
+  .mat-card-no-padding,
+  .mat-card-no-pad {
+    padding-top: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 1em !important;
+  
+    & .mat-card-content,
+    & mat-card-content {
+      min-height: 360px;
+    }
+  }
+  
+  label,
+  .label,
+  mat-radio-group,
+  .mat-radio-group,
+  mat-radio-label-content,
+  .mat-radio-label-content {
+    @extend .font-medium;
+  }
+  
+  .no-icon {
+    &::before {
+      content: "" !important;
+    }
+  
+    &.mat-form-field::before {
+      content: "" !important;
+    }
+  }
+  
+  .mat-checkbox-label{
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+
+
+  /**
+ * Este arquivo é utilizado para criação de classes e estilos genéricos que aparecem entre os componentes do sistema.
+ *
+ * @Author Rodrigo Azevedo Lima
+ */
+
+/**
+ * Impede seleção de texto pelo cursor do mouse.
+ *
+ * @see https://stackoverflow.com/questions/6900124/how-to-make-certain-text-not-selectable-with-css
+ */
+.unselectable,
+.unselectable-text {
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+
+.undraggable {
+  @extend .unselectable;
+  -khtml-user-drag: none;
+  -webkit-user-drag: none;
+  -user-drag: none;
+}
+
+.no-margin{
+  margin: 0px;
+}
+
+.text-uppercase,
+.uppercase,
+.upper {
+  text-transform: uppercase;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fixed-width {
+  @media (max-width: 599px) {
+    width: 100% !important;
+  }
+}
+
+.middle-center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+.font-very-big {
+  font-size: 3rem;
+}
+
+.font-big {
+  font-size: 2em;
+}
+
+.font-medium {
+  font-size: 14px;
+}
+
+.font-little {
+  font-size: 0.8em;
+}
+
+.font-very-little {
+  font-size: 0.6em;
+}
+
+@mixin brighter {
+  font-weight: 420 !important;
+}
+
+.brighter {
+  @include brighter;
+}
+
+@mixin bright {
+  font-weight: 500 !important;
+}
+
+.bright {
+  @include bright;
+}
+
+@mixin bold {
+  font-weight: 700 !important;
+}
+
+.bold {
+  @include bold;
+}
+
+@mixin bolder {
+  font-weight: 900 !important;
+}
+
+.bolder {
+  @include bolder;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.text-console {
+  font-family: Lucida Console, Lucida Sans Typewriter, monaco,
+    Bitstream Vera Sans Mono, monospace;
+}
+
+.no-padding,
+.no-pad {
+  padding: 0px !important;
+}
+
+.text-transparent,
+.text-trans {
+  background: rgba(255, 255, 255, 0.5);
+
+}
+
+.table {
+  display: table !important;
+}
+
+.table-cell,
+.tablecell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.align-middle-center {
+  // Classes baseadas para centralização
+  //@extend .modal-dialog;
+  //@extend .modal-dialog-centered;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  box-sizing: border-box;
+
+  @media (max-width: 576px) {
+    min-height: calc(100% - (1.75rem * 2)) !important;
+    max-width: 500px !important;
+    margin: 1.75rem auto !important;
+    padding: 0 0.4em;
+  }
+
+  &::before {
+    height: calc(100vh - (1.75rem * 2));
+    display: block;
+    content: "";
+  }
+}
+
+.dialog {
+  @extend .modal-dialog;
+  @extend .modal-dialog-centered;
+
+  & .modal-content {
+    height: 100%;
+
+    & .modal-body {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
+
+.full {
+  @extend .col-12;
+  @extend .col-sm-12;
+  @extend .col-md-12;
+  @extend .col-lg-12;
+  @extend .col-xl-12;
+}
+
+.very-big {
+  @extend .col-12;
+  @extend .col-sm-12;
+  @extend .col-md-12;
+  @extend .col-lg-12;
+  @extend .col-xl-9;
+}
+
+.big {
+  @extend .col-12;
+  @extend .col-sm-12;
+  @extend .col-md-9;
+  @extend .col-lg-8;
+  @extend .col-xl-6;
+}
+
+.medium {
+  @extend .col-12;
+  @extend .col-sm-12;
+  @extend .col-md-6;
+  @extend .col-lg-5;
+  @extend .col-xl-4;
+}
+
+.little {
+  @extend .col-12;
+  @extend .col-sm-6;
+  @extend .col-md-4;
+  @extend .col-lg-4;
+  @extend .col-xl-3;
+}
+
+.very-little {
+  @extend .col-12;
+  @extend .col-sm-6;
+  @extend .col-md-3;
+  @extend .col-lg-2;
+  @extend .col-xl-2;
+}
+
+.col-res-1 {
+  @extend .col-sum;
+  @extend .col-1;
+  @extend .col-sm-1;
+  @extend .col-md-1;
+  @extend .col-lg-1;
+  @extend .col-xl-1;
+}
+
+.col-res-2 {
+  @extend .col-sum;
+  @extend .col-2;
+  @extend .col-sm-2;
+  @extend .col-md-2;
+  @extend .col-lg-2;
+  @extend .col-xl-2;
+}
+
+.col-res-3 {
+  @extend .col-sum;
+  @extend .col-3;
+  @extend .col-sm-3;
+  @extend .col-md-3;
+  @extend .col-lg-3;
+  @extend .col-xl-3;
+}
+
+.col-res-4 {
+  @extend .col-sum;
+  @extend .col-4;
+  @extend .col-sm-4;
+  @extend .col-md-4;
+  @extend .col-lg-4;
+  @extend .col-xl-4;
+}
+
+.col-responsive-5,
+.col-res-5 {
+  @extend .col-sum;
+  @extend .col-12;
+  @extend .col-sm-6;
+  @extend .col-md-5;
+  @extend .col-lg-4;
+  @extend .col-xl-3;
+}
+
+.col-res-6 {
+  @extend .col-sum;
+  @extend .col-6;
+  @extend .col-sm-6;
+  @extend .col-md-6;
+  @extend .col-lg-6;
+  @extend .col-xl-6;
+}
+
+.col-res-7 {
+  @extend .col-sum;
+  @extend .col-7;
+  @extend .col-sm-7;
+  @extend .col-md-7;
+  @extend .col-lg-7;
+  @extend .col-xl-7;
+}
+
+.col-res-8 {
+  @extend .col-sum;
+  @extend .col-8;
+  @extend .col-sm-8;
+  @extend .col-md-8;
+  @extend .col-lg-8;
+  @extend .col-xl-8;
+}
+
+.col-res-9 {
+  @extend .col-sum;
+  @extend .col-9;
+  @extend .col-sm-9;
+  @extend .col-md-9;
+  @extend .col-lg-9;
+  @extend .col-xl-9;
+}
+
+.col-res-10 {
+  @extend .col-sum;
+  @extend .col-10;
+  @extend .col-sm-10;
+  @extend .col-md-10;
+  @extend .col-lg-10;
+  @extend .col-xl-10;
+}
+
+.col-res-11 {
+  @extend .col-sum;
+  @extend .col-11;
+  @extend .col-sm-11;
+  @extend .col-md-11;
+  @extend .col-lg-11;
+  @extend .col-xl-11;
+}
+
+.col-res-12 {
+  @extend .col-sum;
+  @extend .col-12;
+  @extend .col-sm-12;
+  @extend .col-md-12;
+  @extend .col-lg-12;
+  @extend .col-xl-12;
+}
+
+.button-left,
+.grid-left {
+  text-align: left;
+  display: inline-block;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+  }
+}
+
+.button-left div,
+.button-left button,
+.grid-left * {
+  float: left;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    float: none;
+    text-align: center;
+  }
+}
+
+.button-right,
+.grid-right {
+  display: inline-block;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+  }
+}
+
+.button-right div,
+.button-right button,
+.grid-right * {
+  float: right;
+
+  @media (max-width: 768px) {
+    float: none;
+    text-align: center;
+  }
+}
+
+.button-center,
+.grid-center {
+  display: inline-block;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    text-align: center;
+    width: inherit;
+    display: inline-block;
+  }
+
+  & div,
+  & button,
+  & * {
+    float: none;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      float: none;
+      text-align: center;
+    }
+  }
+}
+
+
+
+/**
+  * Correção do elemento que esta em linha (evitar quebra de linha)
+  */
+@mixin icon-width-fix {
+  width: calc(100% - 2em);
+  padding-left: 0.5em;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.icon-width-fix {
+  @include icon-width-fix;
+}
+
+.width-minus-40,
+.width-m40 {
+  width: calc(100% - 40px);
+}
+
+.width-minus-50,
+.width-m50 {
+  width: calc(100% - 50px);
+}
+
+.width-minus-60,
+.width-m60 {
+  width: calc(100% - 60px);
+}
+
+.width-minus-80,
+.width-m80 {
+  width: calc(100% - 80px);
+}
+
+.width-minus-100,
+.width-m100 {
+  width: calc(100% - 100px) !important;
+}
+
+/**
+   * Este mixin serve para ser importado em outros elementos SCSS apenas.
+   * Utilize @include icon-material-mixin quando quiser utilizar um tipo especifico de icone,
+   * mas lembre-se de colocar este include dentro de um ::before.
+   *
+   * Exemplo:
+   * . ::before {
+   * @include icon-material-mixin;
+   * content: "favorite";
+   * }
+   *
+   * Lista de icones
+   * @see https://material.io/tools/icons/
+   */
+@mixin icon-material-mixin {
+  //content: "edit";
+  display: inline-block;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
+  blockdivflex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-family: "Material Icons";
+  font-feature-settings: "liga";
+  font-size: 14px;
+  font-weight: 400;
+  height: 25px;
+  width: 1em;
+  position: relative;
+  text-align: left;
+  text-size-adjust: 100%;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 150%;
+  line-height: 1.125;
+}
+
+// Components
+.menu_p {
+
+  & mat-icon,
+  .mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.menu_p_sub {
+  line-height: 16px;
+  font-size: 14px !important;
+  height: 32px !important;
+  padding-left: 10px !important;
+}
+
+.input,
+.i {
+  &:not(.no-icon) {
+    &::before{
+      @media (max-width: 599px) {
+        @include icon-material-mixin;
+        content: "edit";
+      }
+    }
+    &.mat-form-field-disabled::before {
+      @media (max-width: 599px) {
+        color: rgba(0, 0, 0, 0.47);
+      }
+    }
+  }
+
+  &.centered input {
+    text-align: center;
+  }
+}
+
+
+.input:not(.no-icon) .mat-form-field,
+.i:not(.no-icon) .mat-form-field,
+.input:not(.no-icon).mat-form-field .mat-form-field-wrapper,
+.i:not(.no-icon).mat-form-field .mat-form-field-wrapper {
+  @media (max-width: 599px) {
+    @include icon-width-fix;
+  }
+}
+
+.input-full,
+.input-f,
+.if {
+  @extend .i;
+  @extend .full;
+}
+
+.input-very-big,
+.input-very-bg,
+.ivb {
+  @extend .i;
+  @extend .very-big;
+}
+
+.input-big,
+.input-bg,
+.ib {
+  @extend .i;
+  @extend .big;
+}
+
+.input-medium,
+.input-md,
+.im {
+  @extend .i;
+  @extend .medium;
+}
+
+.input-little,
+.input-lt,
+.il {
+  @extend .i;
+  @extend .little;
+}
+
+.input-very-little,
+.input-vs,
+.ivs {
+  @extend .i;
+  @extend .very-little;
+}
+
+.col-sum {
+  width: 100%;
+}
+
+.composed-input-button {
+
+  & mat-form-field,
+  & .mat-form-field {
+    @extend .input;
+    @extend .no-icon;
+    @extend .width-minus-50;
+
+    @media (max-width: 599px) {
+      width: calc(100% - 48px);
+    }
+  }
+
+  & button {
+    margin-left: 6px;
+    margin-right: 2px;
+  }
+}
+
+.tab {
+  margin-left: 2rem;
+}
+
+.spacing-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.spacing-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.spacing-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+  

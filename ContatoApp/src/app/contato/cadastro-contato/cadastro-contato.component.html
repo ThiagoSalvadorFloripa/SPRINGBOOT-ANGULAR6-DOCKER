@@ -1,0 +1,31 @@
+<mat-card class="menutitle">
+  <span class="title">Cadastro de Contato</span>
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+      <div class="margin-div">
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput nome='nome'placeholder="Nome"[(ngModel)]="contato.nome">
+            </mat-form-field>
+          </div>
+          <div class="example-container">
+            <mat-form-field>
+              <input matInput nome='email'placeholder="Email"[(ngModel)]="contato.email">
+            </mat-form-field>
+          </div>
+        </div>
+        <mat-card-actions class="align-center">
+          <div class="btn-group">
+            <button mat-raised-button (click)="cadastrar()" color="primary">
+                  <mat-icon>save</mat-icon> Salvar
+              </button>
+              <button mat-stroked-button (click)="voltar()" color="primary">
+                  <mat-icon>arrow_back</mat-icon> Voltar
+              </button>
+          </div>
+        </mat-card-actions>
+
+    </mat-card-content>
+</mat-card>

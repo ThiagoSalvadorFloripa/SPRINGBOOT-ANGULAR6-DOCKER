@@ -1,0 +1,48 @@
+<mat-card class="menutitle" color="primary">
+    <span class="title">Lista de Contatos</span>
+</mat-card>
+
+<mat-card>
+    <mat-card-content style="margin-left: 2%">
+        <div class="row">
+              <button type="button" mat-raised-button (click)="novo()" color="primary">
+                <mat-icon>add_circle_outline</mat-icon> Novo
+              </button>
+          </div>
+    </mat-card-content>
+    
+    <mat-card-content>
+
+    <table class="table">
+        <thead>
+        <tr>
+          <th class="hidden">Id</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Data Cadastro</th>
+          <th>Status</th>
+          <div style="margin-left: 20%">
+            <th>Ações</th>
+          </div>
+          
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contato of contatos">
+          <td class="hidden">{{contato.id}}</td>
+          <td>{{contato.nome}}</td>
+          <td>{{contato.email}}</td>
+          <td>{{contato.data}}</td>
+          <td>{{contato.status}}</td>
+          <td><button class="btn btn-primary"(click)="editContato(contato)" style="margin-left: 20px;"> Editar</button></td>
+              <button class="btn btn-danger" (click)="deleteContato(contato)" style="margin-left: 20px;" > Deletar</button>
+  
+           </tr>
+         </tbody>
+        </table> 
+    
+      </mat-card-content>
+
+
+
+</mat-card>

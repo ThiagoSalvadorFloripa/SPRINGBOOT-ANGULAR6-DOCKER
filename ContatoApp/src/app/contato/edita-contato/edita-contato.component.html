@@ -1,0 +1,38 @@
+<mat-card class="menutitle">
+    <span class="title">Editar Contato</span>
+</mat-card>
+  
+  <mat-card>
+              <div style="margin-left: 32%">
+                <div class="col-md-6">
+                    <form [formGroup]="editForm" (ngSubmit)="updade()">
+                      <div class="form-group" ng-form="nome">
+                        <label for="nome">Nome:</label>
+                        <input type="nome" formControlName="nome" type="text" placeholder="Nome" name="nome" class="form-control" id="nome">
+                      </div>
+                      
+                      <div class="form-group"  ng-form="email">
+                        <label for="email">Email:</label>
+                        <input formControlName="email" type="email" placeholder="Email" name="email" class="form-control" id="email">
+                      </div>
+
+                      <mat-card-actions class="align-center">
+                        <div class="btn-group">
+                            <button mat-raised-button (click)="update()" color="primary">
+                                  <mat-icon>update</mat-icon> Atualizar
+                              </button>
+                              <button mat-stroked-button (click)="limpar()" color="primary">
+                                  <mat-icon>clear</mat-icon> Limpar
+                              </button>
+                              <button mat-stroked-button (click)="voltar()" color="primary">
+                                  <mat-icon>arrow_back</mat-icon> Voltar
+                              </button>
+                        </div>
+                    </mat-card-actions>
+                    </form>
+                  </div>
+
+                </div> 
+                
+  </mat-card>
+  
