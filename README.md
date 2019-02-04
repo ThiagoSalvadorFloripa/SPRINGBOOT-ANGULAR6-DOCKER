@@ -11,9 +11,9 @@
 </li>
 </ul>
 <h2><strong>Rodando a aplica&ccedil;&atilde;o:</strong></h2>
-<h3>Rodando por Docker:</h3>
+<h3>Rodando pelo Docker:</h3>
 <h4>1.Faça o clone do projeto</h4>
-<h4>2. Execulte no terminal o comando docker-compose up</h4>
+<h4>2. Execulte no terminal o comando "docker-compose up"</h4>
 <h5>Será criado uma imagem do java para rodar o >contato</h5>
 <h5>Será criado uma imagem do Node para rodar o >ContatoApp</h5>
 <h5>Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada.</h5>
@@ -52,7 +52,7 @@ imagem_2
 </li> 
 </ul>
 <h2>Arquitetura:</h2>
-<h4>A arquitetura deste projeto &eacute; baseada em microsservi&ccedil;os, utilizando a ferramenta docker<br />para a aplica&ccedil;&atilde;o do conceito. A arquitetura est&aacute; dividida da seguinte formar:</h4>
+<h4>A arquitetura deste projeto &eacute; baseada em microsservi&ccedil;os, utilizando a ferramenta docker e spring<br />para a aplica&ccedil;&atilde;o do conceito. A arquitetura est&aacute; dividida da seguinte formar:</h4>
 <h4>No conteiner_1:--&gt; Est&aacute; executando a Tecnologia Angular para o front-end da aplica&ccedil;&atilde;o.<br />No conteiner_2:--&gt;Est&aacute; executando a Tecnologia Spring book para o back-end da aplica&ccedil;&atilde;o.<br />No conteiner_3:--&gt;Est&aacute; executando a ferramenta Mysql para a persist&ecirc;ncia de dados da aplica&ccedil;&atilde;o.
 <br />Segue imagem 3 para demostra&ccedil;&atilde;o.</h4>
 <img src="image/arquitetura.png">
