@@ -11,8 +11,29 @@
 </li>
 </ul>
 <h2><strong>Rodando a aplica&ccedil;&atilde;o:</strong></h2>
+<h3>Rodando por Docker:</h3>
+<h4>1.Faça o clone do projeto</h4>
+<h4>2.docker-compose up</h4>
+Será criado uma imagem do java para rodar o >contato
+Será criado uma imagem do Node para rodar o >ContatoApp
+Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada.
+
+<h3>< /br>Rodando sem docker</h3>
+<h4>1.Faça o clone do projeto</h4>
+<h4>2.Entre na pasta "ContatoApp" e execulte o comando pelo CMD npm install, ou importe a pasta para um IDE e habilite o terminal e execulte o mesmo comando anterior</h4>
+<h4>3.Importe a pasta "contato" para um IDE que tenha tomcate ou compilador java.</h4>
+<h4>4. Acesse a pasta "resources" abra o arquivo "application.properties" e conete como seu banco de dados</h4>
+
+
 <h2>Testando a aplica&ccedil;&atilde;o:</h2>
+<h3>Testando o Front-end</h3>
 <h4>Abra um Browser e coloque o seguinte endere&ccedil;o: http://localhost:4200/<br />conforme imagem 1 abaixo.</h4>
+<img src="image/front-teste.png">
+imagem_1
+<h3>Testando o Back-end</h3>
+<h4>Abra um Browser e coloque o seguinte endere&ccedil;o: http://localhost:8080/app/users<br />conforme imagem 2 abaixo.</h4>
+<img src="image/back=teste.png">
+imagem_2
 <h4>&nbsp;</h4>
 <h2>Principais Tecnologias:</h2>
 <ul>
@@ -35,10 +56,30 @@
 <h2>Arquitetura:</h2>
 <h4>A arquitetura deste projeto &eacute; baseada em microsservi&ccedil;os, utilizando a ferramenta docker<br />para a aplica&ccedil;&atilde;o do conceito. A arquitetura est&aacute; dividida da seguinte formar:</h4>
 <h4>No conteiner_1:--&gt; Est&aacute; executando a Tecnologia Angular para o front-end da aplica&ccedil;&atilde;o.<br />No conteiner_2:--&gt;Est&aacute; executando a Tecnologia Spring book para o back-end da aplica&ccedil;&atilde;o.<br />No conteiner_3:--&gt;Est&aacute; executando a ferramenta Mysql para a persist&ecirc;ncia de dados da aplica&ccedil;&atilde;o.
-<br />Segue imagem1 para demostra&ccedil;&atilde;o.</h4>
+<br />Segue imagem 3 para demostra&ccedil;&atilde;o.</h4>
 <img src="image/arquitetura.png">
-  Imagem_1
+  Imagem_3
 <h2>Depend&ecirc;ncias maven:</h2>
+<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+</dependencies>
 <h4><br />&lt;//&gt;</h4>
 <h2><br />Vers&atilde;o:</h2>
 <h4>1.0.0</h4>
