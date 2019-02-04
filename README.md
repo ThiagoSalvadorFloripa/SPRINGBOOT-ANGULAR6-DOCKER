@@ -14,15 +14,15 @@
 <h3>Rodando por Docker:</h3>
 <h4>1.Faça o clone do projeto</h4>
 <h4>2.docker-compose up</h4>
-Será criado uma imagem do java para rodar o >contato
-Será criado uma imagem do Node para rodar o >ContatoApp
-Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada.
+<h5>Será criado uma imagem do java para rodar o >contato</h5>
+<h5>Será criado uma imagem do Node para rodar o >ContatoApp</h5>
+<h5>Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada.</h5>
 
 <h3>Rodando sem docker</h3>
 <h4>1.Faça o clone do projeto</h4>
 <h4>2.Entre na pasta "ContatoApp" e execulte o comando pelo CMD npm install, ou importe a pasta para um IDE e habilite o terminal e execulte o mesmo comando anterior</h4>
 <h4>3.Importe a pasta "contato" para um IDE que tenha tomcate ou compilador java.</h4>
-<h4>4. Acesse a pasta "resources" abra o arquivo "application.properties" e conete como seu banco de dados</h4>
+<h4>4. Acesse a pasta "resources" abra o arquivo "application.properties" substitua o link de url, nome e senha para seu banco de dados</h4>
 <h2>Testando a aplica&ccedil;&atilde;o:</h2>
 <h3>Testando o Front-end</h3>
 <h4>Abra um Browser e coloque o seguinte endere&ccedil;o: http://localhost:4200/<br />conforme imagem 1 abaixo.</h4>
@@ -61,9 +61,6 @@ imagem_2
 CREATE TABLE contato ( id INT NOT NULL AUTO_INCREMENT, nome VARCHAR(250), email VARCHAR(250), data DATETIME NULL DEFAULT CURRENT_TIMESTAMP, status TINYINT NULL DEFAULT 1, PRIMARY KEY (id));
 <h2>Depend&ecirc;ncias Marvin :</h2>
 <img src="image/dep.png">
-
-
-<h4><br />&lt;//&gt;</h4>
 <h2><br />Vers&atilde;o:</h2>
 <h4>1.0.0</h4>
 <h2><br />Autor:</h2>
