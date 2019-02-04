@@ -23,8 +23,6 @@ Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada
 <h4>2.Entre na pasta "ContatoApp" e execulte o comando pelo CMD npm install, ou importe a pasta para um IDE e habilite o terminal e execulte o mesmo comando anterior</h4>
 <h4>3.Importe a pasta "contato" para um IDE que tenha tomcate ou compilador java.</h4>
 <h4>4. Acesse a pasta "resources" abra o arquivo "application.properties" e conete como seu banco de dados</h4>
-
-
 <h2>Testando a aplica&ccedil;&atilde;o:</h2>
 <h3>Testando o Front-end</h3>
 <h4>Abra um Browser e coloque o seguinte endere&ccedil;o: http://localhost:4200/<br />conforme imagem 1 abaixo.</h4>
@@ -60,26 +58,9 @@ imagem_2
 <img src="image/arquitetura.png">
   Imagem_3
 <h2>Depend&ecirc;ncias maven:</h2>
-<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-</dependencies>
+<img src="image/dep.png">
+
+
 <h4><br />&lt;//&gt;</h4>
 <h2><br />Vers&atilde;o:</h2>
 <h4>1.0.0</h4>
