@@ -18,7 +18,7 @@ Será criado uma imagem do java para rodar o >contato
 Será criado uma imagem do Node para rodar o >ContatoApp
 Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada.
 
-<h3>< /br>Rodando sem docker</h3>
+<h3>Rodando sem docker</h3>
 <h4>1.Faça o clone do projeto</h4>
 <h4>2.Entre na pasta "ContatoApp" e execulte o comando pelo CMD npm install, ou importe a pasta para um IDE e habilite o terminal e execulte o mesmo comando anterior</h4>
 <h4>3.Importe a pasta "contato" para um IDE que tenha tomcate ou compilador java.</h4>
@@ -57,7 +57,9 @@ imagem_2
 <br />Segue imagem 3 para demostra&ccedil;&atilde;o.</h4>
 <img src="image/arquitetura.png">
   Imagem_3
-<h2>Depend&ecirc;ncias maven:</h2>
+<h2>BD de criação</h2>
+CREATE TABLE contato ( id INT NOT NULL AUTO_INCREMENT, nome VARCHAR(250), email VARCHAR(250), data DATETIME NULL DEFAULT CURRENT_TIMESTAMP, status TINYINT NULL DEFAULT 1, PRIMARY KEY (id));
+<h2>Depend&ecirc;ncias Marvin :</h2>
 <img src="image/dep.png">
 
 
