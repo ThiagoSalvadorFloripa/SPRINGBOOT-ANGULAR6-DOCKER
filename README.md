@@ -13,12 +13,12 @@
 <h2><strong>Rodando a aplica&ccedil;&atilde;o:</strong></h2>
 <h3>Rodando por Docker:</h3>
 <h4>1.Faça o clone do projeto</h4>
-<h4>2.docker-compose up</h4>
+<h4>2. Execulte no terminal o comando docker-compose up</h4>
 <h5>Será criado uma imagem do java para rodar o >contato</h5>
 <h5>Será criado uma imagem do Node para rodar o >ContatoApp</h5>
 <h5>Será criado uma imagem do Mysql para rodar o >A base de Dados Mysql configurada.</h5>
 
-<h3>Rodando sem docker</h3>
+<h3>Rodando pelo Windows</h3>
 <h4>1.Faça o clone do projeto</h4>
 <h4>2.Entre na pasta "ContatoApp" e execulte o comando pelo CMD npm install, ou importe a pasta para um IDE e habilite o terminal e execulte o mesmo comando anterior</h4>
 <h4>3.Importe a pasta "contato" para um IDE que tenha tomcate ou compilador java.</h4>
